@@ -1,0 +1,233 @@
+@charset "UTF-8"
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/*--header-- */
+header {
+    height: 100vh;
+    background-image: url('Modern\ Workspace\ with\ City\ View\ at\ Dusk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+     transition: 0.3s;
+}
+nav ul :hover{
+    text-decoration: underline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* hero */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.content h1 {
+    font-size: 35px;
+}
+.content p{
+    font-size: 15px;
+}
+.content span{
+    color: beige;
+    text-decoration: underline;
+}
+.content .btn-project{
+    display: inline-block;
+    margin-top: 35px;
+    border-radius: 50px;
+    background-color:#E3C5AF;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 15px;
+   color: white;
+   transition: 0.3s;
+}
+.content .btn-project:hover{
+    background-color:#b39884;
+}
+/*--main--*/
+/* Container: ينسق الكروت بجانب بعضها البعض */
+h2{
+    text-align: center;
+    text-decoration:underline;
+    font-family:initial;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px; /* زيادة المسافة قليلاً لراحة العين */
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* خلفية فاتحة جداً لإبراز الكروت */
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 30px); /* عرض يسمح بـ 3 كروت في السطر للشاشات الكبيرة */
+    min-width: 300px;
+    max-width: 380px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px; /* زوايا أكثر انحناءً لتبدو عصرية */
+    overflow: hidden;
+    /* إضافة ظل ناعم ليظهر الكرت بارزاً كما في الصورة */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease; /* تأثير عند تمرير الماوس */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* يرتفع الكرت قليلاً عند تمرير الماوس */
+}
+
+.project-img img {
+    width: 100%;
+    height: 220px; /* ارتفاع متناسق للصور */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.project-content {
+    padding: 20px;
+    text-align: center; /* توسيط النص ليعطي مظهر "البروفايل" */
+}
+
+.project-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.btn-project {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #E3C5AF; /* لون أزرق احترافي */
+    color: white;
+    border-radius: 25px; /* زر دائري الحواف */
+    font-weight: bold;
+    font-size: 0.85rem;
+     transition: 0.3s;
+}
+.btn-project:hover{
+    background-color:#b39884;
+}
+.articles-list {
+    max-width: 800px; /* المقالات بدون صور تبان أحسن كي تكون في حاوية ضيقة */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-item {
+    padding: 30px 0;
+    border-bottom: 1px solid #929292; /* خط فاصل بين المقالات */
+    transition: all 0.3s ease;
+}
+
+.article-item:last-child {
+    border-bottom: none;
+}
+
+.article-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.tag {
+    color: #007bff; /* لون مميز للتصنيف */
+    font-weight: 600;
+}
+
+.article-link {
+    text-decoration: none;
+    color: #222;
+}
+
+.article-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.article-item:hover h3 {
+    color: #007bff; /* يتبدل اللون كي تحطي الماوس */
+}
+
+.article-item p {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+/*footer*/
+footer{
+    background-color:#fceadd;
+    padding: 20px;
+}
+footer ul{
+   display: flex;
+   gap:50px;
+   justify-content:center;
+   text-decoration:none;
+}
+footer p{
+    text-align: center;
+   margin-top: 50px
+}
