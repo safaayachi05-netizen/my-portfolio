@@ -231,3 +231,24 @@ footer p{
     text-align: center;
    margin-top: 50px
 }
+@media (max-width: 768px) {
+    /* تجعل الأقسام تظهر تحت بعضها بدل ما تكون في سطر واحد */
+    .container, .projects-grid { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* تعديل حجم الخط ليكون مناسباً للموبايل */
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* تعديل عرض الصور أو الكروت لتأخذ مساحة الشاشة */
+    .project-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
