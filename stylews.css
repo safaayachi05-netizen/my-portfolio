@@ -13,7 +13,7 @@ body {
 
 /*--header-- */
 header {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('b.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,24 +231,50 @@ footer p{
     text-align: center;
    margin-top: 50px
 }
+/* تنسيقات الأجهزة اللوحية والهواتف */
 @media (max-width: 768px) {
-    /* تجعل الأقسام تظهر تحت بعضها بدل ما تكون في سطر واحد */
-    .container, .projects-grid { 
-        display: flex;
+    
+    /* جعل القائمة العلوية تترتب عمودياً */
+    nav {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
+        gap: 15px;
     }
 
-    /* تعديل حجم الخط ليكون مناسباً للموبايل */
-    h1 {
-        font-size: 1.8rem;
-        text-align: center;
+    nav ul {
+        padding: 0;
+        gap: 10px;
+        font-size: 14px;
     }
 
-    /* تعديل عرض الصور أو الكروت لتأخذ مساحة الشاشة */
+    /* تصغير حجم العناوين لتناسب الشاشة الصغيرة */
+    .content h1 {
+        font-size: 26px;
+    }
+
+    /* جعل الكروت (Projects) تأخذ العرض الكامل وتترتب فوق بعضها */
     .project-card {
-        width: 90%;
-        margin-bottom: 20px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* تعديل الـ Footer */
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
 
+/* للهواتف الصغيرة جداً (أقل من 480 بكسل) */
+@media (max-width: 480px) {
+    .content .btn-project {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}
