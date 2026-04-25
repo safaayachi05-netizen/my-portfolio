@@ -57,13 +57,13 @@ nav a {
 
 /* hero */
 .content {
-     position: relative;
+    position: relative;
     z-index: 2;
     text-align: center;
-    margin: auto;
-    padding: 20px;
-    top: 40px;
-    transform: translateY(-50%);
+    /* هذا التعديل سيجعل المحتوى يتوسط الصفحة عمودياً دون تداخل */
+    margin: auto; 
+    padding: 40px 20px;
+    /* حذفنا الـ top والـ transform لأننا استخدمنا Flexbox في الهيدر */
 }
 
 .content h1 {
