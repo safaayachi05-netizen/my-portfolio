@@ -20,6 +20,8 @@ header {
     background-position: center;
     position: relative;
     color: white;
+     display: flex;
+    flex-direction: column;
 }
 
 header::after {
@@ -34,7 +36,7 @@ nav {
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
+    padding: 20px ;
 }
 
 nav ul {
@@ -276,5 +278,35 @@ footer p{
     
     .container {
         padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    /* تصغير العنوان الرئيسي ليناسب عرض الشاشة */
+    .content h1 {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* جعل روابط القائمة تترتب بجانب بعضها بشكل أصغر أو فوق بعضها */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    /* تكبير مساحة اللمس للزر */
+    .content .btn-project {
+        margin-top: 25px;
+        padding: 12px 30px;
     }
 }
