@@ -20,7 +20,7 @@ header {
     background-position: center;
     position: relative;
     color: white;
-     display: flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -57,10 +57,12 @@ nav a {
 
 /* hero */
 .content {
-    position: relative;
+     position: relative;
     z-index: 2;
     text-align: center;
-    top: 40%;
+    margin: auto;
+    padding: 20px;
+    top: 40px;
     transform: translateY(-50%);
 }
 
